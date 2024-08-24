@@ -1,74 +1,136 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RadTech AI - Cameron Rader</title>
+    <title>Cameron Rader - Tech Innovator</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
-    <header>
-        <img src="images/profile.jpg" alt="Cameron Rader" class="profile-image">
-        <h1>RadTech AI</h1>
-        <h2>Cameron Rader</h2>
+    <nav class="main-nav">
+        <div class="nav-wrapper">
+            <a href="#" class="logo">CR</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Cameron Rader</h1>
+        <p>Tech Innovator & PC Builder</p>
     </header>
 
     <main>
-        <section id="about-me">
-            <h3>About Me</h3>
-            <p>Technology has fascinated me from a young age. As a toddler, I regularly used computers to play games. As I grew older, I began to tinker with my toys and various technologies, including disk players. I would take them apart to understand how they worked and brainstorm ways to improve their functionality. Creating new technology is a dream of mine, and I am deeply passionate about making a positive impact on the world. Through my love for technology and creativity, I aspire to leave behind something that betters the world and creates a lasting legacy.</p>
+        <section id="about" class="section">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>Technology has fascinated me from a young age. As a toddler, I regularly used computers to play games. As I grew older, I began to tinker with my toys and various technologies, including disk players. I would take them apart to understand how they worked and brainstorm ways to improve their functionality. Creating new technology is a dream of mine, and I am deeply passionate about making a positive impact on the world.</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
         </section>
 
-        <section id="certifications">
-            <h3>Certifications</h3>
-            <ul>
-                <li>CompTIA A+ Certification</li>
-                <li>Google IT Support Professional Certificate</li>
-                <li>Technical Support Fundamentals Certificate</li>
-                <li>Operating Systems and You: Becoming a Power User Certificate</li>
-                <li>The Bits and Bytes of Computer Networking Certificate</li>
-                <li>System Administration and IT Infrastructure Services Certificate</li>
-                <li>IT Security: Defense against the digital dark arts Certificate</li>
-            </ul>
-        </section>
-
-        <section id="skills">
-            <h3>Skills</h3>
-            <ul>
-                <li>IT Hardware Support</li>
-                <li>Desktop Computers</li>
-                <li>Operating Systems</li>
-                <li>Problem Solving</li>
-                <li>Ingenuity</li>
-                <li>Computer Software</li>
-                <li>Communication</li>
-                <li>Networking</li>
-                <li>Customer Support</li>
-            </ul>
-        </section>
-
-        <section id="pc-builds">
-            <h3>PC Builds</h3>
-            <div class="carousel">
-                <div class="carousel-container">
-                    <div class="carousel-slide">
-                        <h4>Personal Build</h4>
-                        <img src="images/personal-build.jpg" alt="Personal PC Build" class="build-image">
-                        <p>I built my own PC using an Optiplex 7020 MT motherboard, a Xeon E3 1271-V3 processor, and 24GB of DDR3 RAM. It also features an XFX RX580 8GB graphics card and a PCI adapter for an NVMe SSD. This is my daily-use computer, optimized to run almost any game or software. I've also used it to run local AI models with smaller parameters.</p>
+        <section id="skills" class="section">
+            <div class="section-content">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>IT Hardware Support</h3>
                     </div>
-                    <div class="carousel-slide">
-                        <h4>Mid-Tier Build ($700-800)</h4>
-                        <img src="images/mid-tier-build.jpg" alt="Mid-Tier PC Build" class="build-image">
-                        <p>My second PC build was a gaming computer featuring an Asus motherboard. I installed an AMD Ryzen 5 3600 CPU and 16GB of XLR8 DDR4 RAM, along with a 1TB NVMe SSD. For the GPU, I chose the RX 6600 8GB XFX model. I also replaced the old fans with Corsair's line of fans for better airflow and overall control.</p>
+                    <div class="skill-item">
+                        <i class="fas fa-desktop"></i>
+                        <h3>Desktop Computers</h3>
                     </div>
-                    <div class="carousel-slide">
-                        <h4>Low/Mid-Tier Build ($500)</h4>
-                        <img src="images/low-mid-tier-build.jpg" alt="Low/Mid-Tier PC Build" class="build-image">
-                        <p>I also built another gaming computer using the LGA 1150 platform for the CPU, utilizing the Xeon E3 1271-V3 processor once again. I installed 16GB of DDR3 RAM, along with a 1TB NVMe SSD and a 2TB hard drive. The owner wanted to use this computer for gaming, so I chose the RX 6600 GPU, which has proven to be reliable and strong for future upgrades if desired.</p>
+                    <div class="skill-item">
+                        <i class="fas fa-server"></i>
+                        <h3>Operating Systems</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h3>Problem Solving</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Ingenuity</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <h3>Computer Software</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-comments"></i>
+                        <h3>Communication</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Networking</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-headset"></i>
+                        <h3>Customer Support</h3>
                     </div>
                 </div>
-                <button class="carousel-button prev">&lt;</button>
-                <button class="carousel-button next">&gt;</button>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-content">
+                <h2>Featured Projects</h2>
+                <div class="project-carousel">
+                    <div class="project-slide">
+                        <img src="images/personal-build.jpg" alt="Personal PC Build" class="project-image">
+                        <h3>Personal Build</h3>
+                        <p>High-performance PC with Xeon E3 1271-V3 processor and XFX RX580 8GB graphics card.</p>
+                    </div>
+                    <div class="project-slide">
+                        <img src="images/mid-tier-build.jpg" alt="Mid-Tier PC Build" class="project-image">
+                        <h3>Mid-Tier Build</h3>
+                        <p>Gaming PC featuring AMD Ryzen 5 3600 CPU and RX 6600 8GB GPU.</p>
+                    </div>
+                    <div class="project-slide">
+                        <img src="images/low-mid-tier-build.jpg" alt="Low/Mid-Tier PC Build" class="project-image">
+                        <h3>Budget Gaming Build</h3>
+                        <p>Affordable gaming rig with Xeon E3 1271-V3 and RX 6600 GPU.</p>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="prev-button"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <div class="section-content">
+                <h2>Certifications</h2>
+                <ul class="cert-list">
+                    <li>CompTIA A+ Certification</li>
+                    <li>Google IT Support Professional Certificate</li>
+                    <li>Technical Support Fundamentals Certificate</li>
+                    <li>Operating Systems and You: Becoming a Power User Certificate</li>
+                    <li>The Bits and Bytes of Computer Networking Certificate</li>
+                    <li>System Administration and IT Infrastructure Services Certificate</li>
+                    <li>IT Security: Defense against the digital dark arts Certificate</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-content">
+                <h2>Get in Touch</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
