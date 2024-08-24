@@ -1,12 +1,16 @@
+```javascript
 document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.carousel-container');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevButton = document.querySelector('.carousel-button.prev');
-    const nextButton = document.querySelector('.carousel-button.next');
+    const carousel = document.querySelector('.project-carousel');
+    const slides = document.querySelectorAll('.project-slide');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
     let currentIndex = 0;
 
     function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        carousel.scrollTo({
+            left: currentIndex * carousel.offsetWidth,
+            behavior: 'smooth'
+        });
     }
 
     function showNextSlide() {
@@ -22,23 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.addEventListener('click', showNextSlide);
     prevButton.addEventListener('click', showPrevSlide);
 
-    // Optional: Add keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') showNextSlide();
-        if (e.key === 'ArrowLeft') showPrevSlide();
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 
-    // Optional: Add touch swiping for mobile devices
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    carousel.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    });
-
-    carousel.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        if (touchStartX - touchEndX > 50) showNextSlide();
-        if (touchEndX - touchStartX > 50) showPrevSlide();
-    });
-});
+    // Responsive navigation menu
+    const menuToggle = document.createElement('button');
+    menuToggle.classList.add('menu-toggle');
