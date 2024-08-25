@@ -1,10 +1,10 @@
 /* Global Styles */
 :root {
     --primary-color: #0071e3;
-    --background-color: #f5f5f7;
-    --text-color: #1d1d1f;
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
     --secondary-text-color: #86868b;
-    --section-background: #ffffff;
+    --section-background: #2c2c2c;
 }
 
 * {
@@ -22,7 +22,7 @@ body {
 
 /* Navigation Styles */
 .main-nav {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(44, 44, 44, 0.8);
     backdrop-filter: blur(20px);
     position: fixed;
     top: 0;
@@ -45,26 +45,6 @@ body {
     font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
 }
 
 /* Hero Section */
@@ -101,116 +81,62 @@ body {
     text-align: center;
 }
 
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-}
-
-.skill-item {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--section-background);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-}
-
-.skill-item i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* Project Carousel */
-.project-carousel {
+/* About Section */
+.about-container {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    align-items: flex-start;
+    margin-bottom: 2rem;
 }
 
-.project-slide {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    padding: 1rem;
-}
-
-.project-image {
-    width: 100%;
-    height: 300px;
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     object-fit: cover;
-    border-radius: 10px;
+    margin-right: 2rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    text-align: left;
     margin-bottom: 1rem;
 }
 
-.carousel-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.carousel-nav button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-nav button:hover {
-    background-color: #005cbd;
-}
-
-/* Certifications */
-.cert-list {
+/* Skills Section */
+.skills-list {
     list-style: none;
     padding: 0;
 }
 
-.cert-list li {
+.skills-list li {
     background-color: var(--section-background);
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Form */
-.contact-form {
     display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
+    align-items: center;
 }
 
-.contact-form input,
-.contact-form textarea {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #d2d2d7;
-    border-radius: 5px;
-    font-size: 1rem;
+.skills-list li i {
+    margin-right: 1rem;
+    color: var(--primary-color);
 }
 
+/* CTA Button */
 .cta-button {
+    display: inline-block;
     background-color: var(--primary-color);
     color: white;
-    border: none;
+    text-decoration: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     border-radius: 5px;
-    cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 2rem;
 }
 
 .cta-button:hover {
@@ -227,23 +153,17 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    .about-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .profile-image {
+        margin-right: 0;
+        margin-bottom: 2rem;
     }
 
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .section {
-        padding: 3rem 1rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .about-text h2 {
+        text-align: center;
     }
 }
