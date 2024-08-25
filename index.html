@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cameron Rader - Tech Innovator</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
     <nav class="main-nav">
@@ -22,13 +22,8 @@
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-            <img src="images/profile.jpg" alt="Cameron Rader" class="profile-image">
-            <div class="hero-text">
-                <h1>Cameron Rader</h1>
-                <p>Tech Innovator & PC Builder</p>
-            </div>
-        </div>
+        <h1>Cameron Rader</h1>
+        <p>Tech Innovator & PC Builder</p>
     </header>
 
     <main>
@@ -36,15 +31,31 @@
             <div class="section-content">
                 <h2>About Me</h2>
                 <p>Technology has fascinated me from a young age. As a toddler, I regularly used computers to play games. As I grew older, I began to tinker with my toys and various technologies, including disk players. I would take them apart to understand how they worked and brainstorm ways to improve their functionality. Creating new technology is a dream of mine, and I am deeply passionate about making a positive impact on the world.</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
             </div>
         </section>
 
+            <section id="certifications" class="section">
+            <div class="section-content">
+                <h2>Certifications</h2>
+                <ul class="cert-list">
+                    <li>CompTIA A+ Certification</li>
+                    <li>Google IT Support Professional Certificate</li>
+                    <li>Technical Support Fundamentals Certificate</li>
+                    <li>Operating Systems and You: Becoming a Power User Certificate</li>
+                    <li>The Bits and Bytes of Computer Networking Certificate</li>
+                    <li>System Administration and IT Infrastructure Services Certificate</li>
+                    <li>IT Security: Defense against the digital dark arts Certificate</li>
+                </ul>
+            </div>
+        </section>
+        
         <section id="skills" class="section">
             <div class="section-content">
                 <h2>Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-item">
-                        <i class="fas fa-laptop"></i>
+                        <i class="fas fa-laptop-code"></i>
                         <h3>IT Hardware Support</h3>
                     </div>
                     <div class="skill-item">
@@ -75,52 +86,40 @@
                         <i class="fas fa-network-wired"></i>
                         <h3>Networking</h3>
                     </div>
+                    <div class="skill-item">
+                        <i class="fas fa-headset"></i>
+                        <h3>Customer Support</h3>
+                    </div>
                 </div>
             </div>
         </section>
-    
-        <section id="certifications" class="section">
-            <div class="section-content">
-                <h2>Certifications</h2>
-                <ul class="cert-list">
-                    <li>CompTIA A+ Certification</li>
-                    <li>Google IT Support Professional Certificate</li>
-                    <li>Technical Support Fundamentals Certificate</li>
-                    <li>Operating Systems and You: Becoming a Power User Certificate</li>
-                    <li>The Bits and Bytes of Computer Networking Certificate</li>
-                    <li>System Administration and IT Infrastructure Services Certificate</li>
-                    <li>IT Security: Defense against the digital dark arts Certificate</li>
-                </ul>
-            </div>
-        </section>
-        
+
         <section id="projects" class="section">
             <div class="section-content">
                 <h2>Featured Projects</h2>
                 <div class="project-carousel">
                     <div class="project-slide">
-                        <img src="images/personal-build.jpg" alt="Personal Build" class="project-image">
+                        <img src="images/personal-build.jpg" alt="Personal PC Build" class="project-image">
                         <h3>Personal Build</h3>
-                        <p>Personal PC with Xeon E3 1271-V3 processor and XFX RX580 8GB graphics card.</p>
+                        <p>High-performance PC with Xeon E3 1271-V3 processor and XFX RX580 8GB graphics card.</p>
                     </div>
                     <div class="project-slide">
-                        <img src="images/mid-tier-build.jpg" alt="Mid-Tier Build" class="project-image">
+                        <img src="images/mid-tier-build.jpg" alt="Mid-Tier PC Build" class="project-image">
                         <h3>Mid-Tier Build</h3>
                         <p>Gaming PC featuring AMD Ryzen 5 3600 CPU and RX 6600 8GB GPU.</p>
                     </div>
                     <div class="project-slide">
-                        <img src="images/low-mid-tier-build.jpg" alt="Budget Gaming Build" class="project-image">
+                        <img src="images/low-mid-tier-build.jpg" alt="Low/Mid-Tier PC Build" class="project-image">
                         <h3>Budget Gaming Build</h3>
                         <p>Affordable gaming rig with Xeon E3 1271-V3 and RX 6600 GPU.</p>
                     </div>
                 </div>
                 <div class="carousel-nav">
-                    <button class="prev-button">Previous</button>
-                    <button class="next-button">Next</button>
+                    <button class="prev-button"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-button"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </section>
-
 
         <section id="contact" class="section">
             <div class="section-content">
@@ -136,7 +135,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Cameron Rader. All Rights Reserved.</p>
+        <p>© 2024 Cameron Rader. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
