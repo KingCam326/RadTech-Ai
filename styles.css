@@ -292,3 +292,26 @@ footer {
         height: 150px;
     }
 }
+
+/* About Section and CTA Button Styles */
+.section-content p {
+    margin-bottom: 30px; /* Adds space below the paragraph */
+}
+
+.cta-wrapper {
+    margin-top: 20px; /* Adds space above the button */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color); /* Using your existing primary color variable */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #005cbd; /* Darker shade for hover effect */
+}
