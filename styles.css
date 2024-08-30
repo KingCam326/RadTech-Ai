@@ -245,7 +245,7 @@ body {
 }
 
 .contact-form .cta-button {
-    background-color: var(--primary-color);
+    background-color: #808080; /* changed from var(--primary-color) to a grey color */
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
