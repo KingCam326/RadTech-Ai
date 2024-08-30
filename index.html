@@ -38,7 +38,22 @@
                     <a href="#contact" class="cta-button">Get in Touch</a>
                 </div>
             </div>
-        </section>        
+        </section> 
+        
+        <section id="certifications" class="section highlight">
+            <div class="section-content">
+                <h2>Certifications</h2>
+                <ul class="cert-list">
+                    <li>CompTIA A+ Certification</li>
+                    <li>Google IT Support Professional Certificate</li>
+                    <li>Technical Support Fundamentals Certificate</li>
+                    <li>Operating Systems and You: Becoming a Power User Certificate</li>
+                    <li>The Bits and Bytes of Computer Networking Certificate</li>
+                    <li>System Administration and IT Infrastructure Services Certificate</li>
+                    <li>IT Security: Defense against the digital dark arts Certificate</li>
+                </ul>
+            </div>
+        </section>
 
         <section id="skills" class="section">
             <div class="section-content">
@@ -84,56 +99,59 @@
             </div>
         </section>
 
-            <section id="certifications" class="section">
-            <div class="section-content">
-                <h2>Certifications</h2>
-                <ul class="cert-list">
-                    <li>CompTIA A+ Certification</li>
-                    <li>Google IT Support Professional Certificate</li>
-                    <li>Technical Support Fundamentals Certificate</li>
-                    <li>Operating Systems and You: Becoming a Power User Certificate</li>
-                    <li>The Bits and Bytes of Computer Networking Certificate</li>
-                    <li>System Administration and IT Infrastructure Services Certificate</li>
-                    <li>IT Security: Defense against the digital dark arts Certificate</li>
-                </ul>
+       <section id="projects" class="section">
+    <div class="section-content">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <h3>Personal Build</h3>
+                <div class="before-after-container">
+                    <div class="before">
+                        <img src="images/personal-build.jpg" alt="Personal PC Build - Before" class="project-image">
+                        <p>Before</p>
+                        <p class="description">Personal Budget PC with Xeon E3 1271-V3 processor and XFX RX 580 8GB graphics card.</p>
+                    </div>
+                    <div class="after">
+                        <img src="images/personal-buildv2.jpg" alt="Personal PC Build - After" class="project-image">
+                        <p>After</p>
+                        <p class="description">Originally built as a personal budget computer, I have now upgraded to the AM4 platform, featuring a Ryzen 5 5500 CPU and 16GB of Corsair Vengeance Pro 3200 MHz RAM in dual channel. I am still utilizing the same RX 580 8GB GPU. This upgrade has significantly enhanced performance, particularly in video editing, coding, and multitasking.</p>
+                    </div>
+                </div>
             </div>
-        </section>
-        
+            <div class="project-item">
+                <h3>Mid-Tier Build</h3>
+                <div class="single-build">
+                    <img src="images/mid-tier-build.jpg" alt="Mid-Tier PC Build" class="project-image">
+                    <p class="description">Gaming PC featuring AMD Ryzen 5 3600 CPU and RX 6600 8GB GPU, offering excellent performance for modern games and productivity tasks.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <h3>Low/Mid-Tier Build</h3>
+                <div class="before-after-container">
+                    <div class="before">
+                        <img src="images/low-mid-tier-build.jpg" alt="Low/Mid-Tier PC Build - Before" class="project-image">
+                        <p>Before</p>
+                        <p class="description">Affordable gaming rig features an Intel Xeon E3-1271 V3 processor with 16GB of DDR3 RAM in dual channel and the RX 6600 GPU.</p>
+                    </div>
+                    <div class="after">
+                        <img src="images/low-mid-tier-buildv2.jpg" alt="Low/Mid-Tier PC Build - After" class="project-image">
+                        <p>After</p>
+                        <p class="description">The PC was upgraded from an older, bulky case to a modern, tempered glass case. It still features an Intel Xeon E3-1271 V3 processor with 16GB of DDR3 RAM in dual channel. Additionally, it includes the RX 6600 GPU, a personal favorite.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <section id="projects" class="section">
-            <div class="section-content">
-                <h2>Featured Projects</h2>
-                <div class="project-carousel">
-                    <div class="project-slide">
-                        <img src="images/personal-build.jpg" alt="Personal PC Build" class="project-image">
-                        <h3>Personal Build</h3>
-                        <p>High-performance PC with Xeon E3 1271-V3 processor and XFX RX580 8GB graphics card.</p>
-                    </div>
-                    <div class="project-slide">
-                        <img src="images/mid-tier-build.jpg" alt="Mid-Tier PC Build" class="project-image">
-                        <h3>Mid-Tier Build</h3>
-                        <p>Gaming PC featuring AMD Ryzen 5 3600 CPU and RX 6600 8GB GPU.</p>
-                    </div>
-                    <div class="project-slide">
-                        <img src="images/low-mid-tier-build.jpg" alt="Low/Mid-Tier PC Build" class="project-image">
-                        <h3>Budget Gaming Build</h3>
-                        <p>Affordable gaming rig with Xeon E3 1271-V3 and RX 6600 GPU.</p>
-                    </div>
-                </div>
-                <div class="carousel-nav">
-                    <button class="prev-button"><i class="fas fa-chevron-left"></i></button>
-                    <button class="next-button"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </section>
 
         <section id="contact" class="section">
             <div class="section-content">
                 <h2>Get in Touch</h2>
                 <form class="contact-form" action="https://formspree.io/f/xgvwrjje" method="POST">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" required></textarea>                    
                     <button type="submit" class="cta-button">Send Message</button>
                 </form>
             </div>
