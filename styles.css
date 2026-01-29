@@ -1,13 +1,13 @@
 /* Global Styles */
 :root {
-    --primary-color: #3498db;
-    --background-color: #f5f5f5;
-    --text-color: #333333;
-    --secondary-text-color: #666666;
-    --section-background: #ffffff;
-    --highlight-background: #ecf0f1;
-    --link-color: #3498db;
-    --link-hover-color: #2980b9;
+    --primary-color: #00d4ff;
+    --background-color: #0f0f0f;
+    --text-color: #e0e0e0;
+    --secondary-text-color: #b0b0b0;
+    --section-background: #1a1a1a;
+    --highlight-background: #2a2a2a;
+    --link-color: #00d4ff;
+    --link-hover-color: #00a8cc;
 }
 
 * {
