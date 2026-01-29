@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.contact-form');
     
     form.addEventListener('submit', function(e) {
+        // If we've flagged to allow a native submit (fallback), let it proceed
+        if (form.dataset.allowNativeSubmit === 'true') return;
+
         e.preventDefault();
         
         const formData = new FormData(form);
@@ -34,8 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 form.reset();
             } else {
                 console.error('Form submission error:', response.status, data || text);
-                if (response.status === 403) {
-                    alert('Form submission rejected (403). Please verify your Formspree form is active and your email is verified in the Formspree dashboard.');
+                // If Formspree complains about AJAX/reCAPTCHA, fallback to a native submit (page reload)
+                const errStr = (data && data.error) ? data.error : text;
+                if (response.status === 403 && errStr && errStr.indexOf('custom key') !== -1 || (errStr && errStr.indexOf('reCAPTCHA') !== -1)) {
+                    const useNative = confirm('Formspree blocks AJAX submissions for this form (reCAPTCHA/custom key). Submit using a standard page POST instead (the page will reload)?');
+                    if (useNative) {
+                        // allow native submit and retry
+                        form.dataset.allowNativeSubmit = 'true';
+                        form.submit();
+                        return;
+                    } else {
+                        alert('Form not submitted. Please adjust your Formspree settings (disable reCAPTCHA for this form or set a custom AJAX key) and try again.');
+                    }
+                } else if (response.status === 403) {
+                    alert('Form submission rejected (403). Check your Formspree form settings and email verification.');
                 } else {
                     const message = (data && data.error) ? data.error : 'There was a problem submitting your form. Please try again.';
                     alert('Oops! ' + message);
