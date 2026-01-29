@@ -24,13 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Accept': 'application/json'
             }
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
+        .then(async response => {
+            const text = await response.text();
+            let data = null;
+            try { data = JSON.parse(text); } catch (err) { /* not JSON */ }
+
+            if (response.ok) {
                 alert('Thank you for your message. I\'ll get back to you soon!');
                 form.reset();
             } else {
-                alert('Oops! There was a problem submitting your form. Please try again.');
+                console.error('Form submission error:', response.status, data || text);
+                if (response.status === 403) {
+                    alert('Form submission rejected (403). Please verify your Formspree form is active and your email is verified in the Formspree dashboard.');
+                } else {
+                    const message = (data && data.error) ? data.error : 'There was a problem submitting your form. Please try again.';
+                    alert('Oops! ' + message);
+                }
             }
         })
         .catch(error => {
