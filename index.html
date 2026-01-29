@@ -37,7 +37,7 @@
     <main>
         <section id="about" class="section">
             <h2>About Me</h2>
-            <p>As a lifelong technology enthusiast, I have a hands-on approach to problem-solving and a deep passion for understanding how systems work. My experience includes building and configuring multiple desktop computers, as well as working with cloud services such as Microsoft Azure and Amazon Web Services (AWS). I am also currently developing an AI-powered project using a Raspberry Pi 5. My goal is to apply my technical skills to provide excellent IT support and contribute to a team's success.</p>
+            <p>I am a CompTIA A+ and Google-certified IT professional with a lifelong obsession for how things work. After years of managing complex projects and technical troubleshooting in the construction industry, I have pivoted my focus to digital infrastructure. Whether I'm building high-performance custom PCs, configuring cloud services in Azure and AWS, or developing AI projects on a Raspberry Pi 5, I thrive on solving the puzzles that keep systems running smoothly. My goal is to bring that same precision and dedication to a forward-thinking IT support team.</p>
             <div class="cta-wrapper">
                 <a href="#contact" class="cta-button">Get in Touch</a>
             </div>
@@ -148,6 +148,9 @@
         <section id="contact" class="section">
             <h2>Get in Touch</h2>
             <form class="contact-form" action="https://formspree.io/f/xgvwrjje" method="POST">
+                <input type="hidden" name="_subject" value="Website Contact Form Message">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_replyto" id="replyto">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <textarea name="message" placeholder="Message" required></textarea>
@@ -159,5 +162,16 @@
         <p>© 2024 Cameron Rader. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        var form = document.querySelector('.contact-form');
+        if (!form) return;
+        form.addEventListener('submit', function(){
+            var emailField = form.querySelector('input[name="email"]');
+            var reply = form.querySelector('input[name="_replyto"]');
+            if (emailField && reply) reply.value = emailField.value;
+        });
+    });
+    </script>
 </body>
 </html>

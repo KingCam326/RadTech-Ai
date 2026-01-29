@@ -353,3 +353,9 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Space the CTA inside sections a bit from surrounding content */
+.cta-wrapper {
+    margin-top: 2rem;
+    text-align: center;
+}
