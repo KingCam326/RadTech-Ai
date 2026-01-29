@@ -23,6 +23,12 @@ body {
     line-height: 1.6;
 }
 
+/* Ensure dark theme isn't overridden by client/browser styles */
+html, body {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
 /* Navigation Styles */
 .main-nav {
     background-color: var(--section-background);
